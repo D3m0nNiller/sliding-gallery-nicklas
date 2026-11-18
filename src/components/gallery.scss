@@ -1,0 +1,59 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+#root {
+    width: 100vw;
+    height: 100vh;
+}
+
+.gallery {
+    font-family: sans-serif;
+
+    &__images {
+        display: flex;
+        margin: auto;
+        width: 50%;
+        overflow: hidden;
+    }
+
+    &__setup {
+        flex-shrink: 0;
+        width: 100%;
+        position: relative;
+    }
+
+    &__setup h2 {
+        position: absolute;
+        bottom: 0;
+        background-color: rgba(240, 248, 255, 0.764);
+        width: 100%;
+        text-align: center;
+        padding: 0.8em;
+    }
+
+    &__leftArrow {
+        color: black;
+        z-index: 2;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        font-size: 2em;
+    }
+
+    &__rightArrow {
+        color: black;
+        z-index: 2;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        font-size: 2em;
+    }
+}
