@@ -26,7 +26,6 @@ img {
         overflow: hidden;
         grid-column: 1/-1;
         grid-row: 1/-1;
-        width: 100%;
     }
 
     &__track {
@@ -52,7 +51,6 @@ img {
     &__leftArrow {
         color: black;
         z-index: 2;
-        font-size: 2em;
         grid-column: 1/2;
         grid-row: 1/-1;
         place-self: center;
@@ -65,7 +63,6 @@ img {
     &__rightArrow {
         color: black;
         z-index: 2;
-        font-size: 2em;
         grid-column: 4/-1;
         grid-row: 1/-1;
         place-self: center;
@@ -79,5 +76,11 @@ img {
     &__rightArrow {
         border: none;
         background-color: rgba(167, 168, 167, 0.8);
+        font-size: 1.9em;
+    }
+
+    &__leftArrow svg,
+    &__rightArrow svg {
+        margin-top: 15%;
     }
 }
