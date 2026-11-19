@@ -1,4 +1,3 @@
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa"
 import "./gallery.scss"
 
 export default function GalleryImages({ imgLink, headline, divClass }) {
