@@ -16,12 +16,17 @@ img {
 
 .gallery {
     font-family: sans-serif;
+    width: 50%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 
     &__images {
         display: flex;
         margin: auto;
-        width: 50%;
         overflow: hidden;
+        grid-column: 1/-1;
+        grid-row: 1/-1;
     }
 
     &__setup {
@@ -42,18 +47,20 @@ img {
     &__leftArrow {
         color: black;
         z-index: 2;
-        position: absolute;
-        top: 50%;
-        left: 0;
         font-size: 2em;
+        grid-column: 1/2;
+        grid-row: 1/-1;
+        place-self: center;
+        margin-right: auto;
     }
 
     &__rightArrow {
         color: black;
         z-index: 2;
-        position: absolute;
-        top: 50%;
-        right: 0;
         font-size: 2em;
+        grid-column: 4/-1;
+        grid-row: 1/-1;
+        place-self: center;
+        margin-left: auto;
     }
 }
