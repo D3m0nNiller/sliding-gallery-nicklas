@@ -1,10 +1,22 @@
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 
-export default function GalleryArrows() {
+export default function GalleryArrows({ nextImage, previousImage }) {
+
     return (
         <>
-            <FaChevronLeft className="gallery__leftArrow" />
-            <FaChevronRight className="gallery__rightArrow" />
+            <button
+                className="gallery__leftArrow"
+                onClick={previousImage}
+            >
+                <FaChevronLeft />
+            </button>
+
+            <button
+                className="gallery__rightArrow"
+                onClick={nextImage}
+            >
+                <FaChevronRight />
+            </button>
         </>
     )
 }
