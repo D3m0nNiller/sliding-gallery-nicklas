@@ -2,16 +2,6 @@ import { useState, useEffect } from 'react'
 import Gallery from './components/Gallery'
 import GalleryArrows from './components/GalleryArrows'
 
-useEffect(() => {
-  if (!transition) {
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        setTransition(true)
-      })
-    })
-  }
-}, [transition])
-
 function App() {
 
   const [currentImage, setCurrentImage] = useState(1)
@@ -38,6 +28,16 @@ function App() {
       setCurrentImage(1)
     }
   }
+
+  useEffect(() => {
+    if (!transition) {
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          setTransition(true)
+        })
+      })
+    }
+  }, [transition])
 
   return (
     <>
